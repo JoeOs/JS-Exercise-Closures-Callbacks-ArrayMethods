@@ -189,11 +189,11 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 */
 function getFullNames(runners) {
   /* CODE HERE */
-  let fullNames = []
+  let names = []
   runners.forEach(runner =>
-    fullNames.push(`${runner.last_name}, ${runner.first_name}`)
+    names.push(`${runner.last_name}, ${runner.first_name}`)
     );
-    return fullNames;
+    return names;
 }
 
 /**
@@ -209,8 +209,8 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-  let namesAllCap = runners.map(runner => runner.first_name.toUpperCase());
-  return namesAllCap;
+  let capitalFirst = runners.map(runner => runner.first_name.toUpperCase());
+  return capitalFirst;
 }
 
 /**
@@ -226,8 +226,14 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
+
+  let sizeShirt = runners.filter(
+    runner => runner.shirt_size === tShirtSize
+  );
+
+  return sizeShirt;
 }
 
 /**
